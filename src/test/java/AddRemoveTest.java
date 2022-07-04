@@ -7,14 +7,9 @@ import java.util.List;
 public class AddRemoveTest extends BaseTest {
     @BeforeMethod
     public void navigate() {
-        super.setUp();
         driver.get("http://the-internet.herokuapp.com/add_remove_elements/");
     }
-    @AfterMethod
-    public void quitDriver () {
-        super.exit();
-    }
-    @Test
+        @Test
     public void addRemoveButtons() {
         WebElement addButton = driver.findElement(By.xpath("//button[text()='Add Element']"));
         List<WebElement> deleteButtons = driver.findElements(By.xpath("//button[text()='Delete']"));

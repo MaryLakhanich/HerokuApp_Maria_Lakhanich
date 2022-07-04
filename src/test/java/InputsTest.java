@@ -1,18 +1,13 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class InputsTest extends BaseTest {
     @BeforeMethod
     public void navigate() {
-        super.setUp();
         driver.get("http://the-internet.herokuapp.com/inputs");
-    }
-    @AfterMethod
-    public void quitDriver () {super.exit();
     }
     @Test
     public void input () {

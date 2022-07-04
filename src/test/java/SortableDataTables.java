@@ -1,7 +1,6 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -10,13 +9,9 @@ import java.util.List;
 public class SortableDataTables extends BaseTest{
     @BeforeMethod
     public void navigate() {
-        super.setUp();
-        driver.get("http://the-internet.herokuapp.com/tables");
+         driver.get("http://the-internet.herokuapp.com/tables");
     }
 
-    @AfterMethod
-    public void quitDriver() {super.exit();
-    }
     @Test
     public void sortTables () {
         List<WebElement> elements = driver.findElements(By.cssSelector(".tablesorter thead tr th"));

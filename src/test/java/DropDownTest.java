@@ -2,24 +2,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
 public class DropDownTest extends BaseTest {
     @BeforeMethod
     public void navigate() {
-        super.setUp();
-        driver.get("http://the-internet.herokuapp.com/dropdown");
+       driver.get("http://the-internet.herokuapp.com/dropdown");
     }
 
-    @AfterMethod
-    public void quitDriver() {super.exit();
-    }
     @Test
     public void dropDown () {
         WebElement dropdownElement = driver.findElement(By.id("dropdown"));
