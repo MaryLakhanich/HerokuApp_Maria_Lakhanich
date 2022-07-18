@@ -14,8 +14,6 @@ public class ExitIntentTest extends BaseTest {
     public void mouseMoveTest() throws AWTException {
         Robot robot=new Robot();
         robot.mouseMove(1300,10);
-        String modalWindow = driver.getWindowHandle();
-        driver.switchTo().window(modalWindow);
         Assert.assertEquals(driver.findElement(By.cssSelector(".modal-body p")).getText(),"It's commonly used to encourage a user to take an action (e.g., give their e-mail address to sign up for something).");
         driver.findElement(By.cssSelector(".modal-footer p")).click();
     }

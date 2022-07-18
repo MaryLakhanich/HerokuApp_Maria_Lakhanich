@@ -12,7 +12,6 @@ public class FrameTest extends BaseTest{
     @Test
     public void checkFrameText(){
         driver.findElement(By.xpath("//a[@href='/iframe']")).click();
-        WebElement iframe = driver.findElement(By.tagName("iframe"));
         driver.switchTo().frame("mce_0_ifr");
         String frameText = driver.findElement(By.cssSelector("#tinymce p")).getText();
         Assert.assertEquals(frameText,"Your content goes here.");
